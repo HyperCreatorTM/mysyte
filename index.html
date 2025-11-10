@@ -94,22 +94,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="balance-calculator-row" data-rate="0.02">
-                    <div class="flex justify-between items-center mb-2">
-                        <span class="font-semibold text-lg">Bank</span>
-                        <span class="text-sm font-medium text-red-400">2%</span>
-                    </div>
-                    <div class="grid grid-cols-2 gap-3">
-                        <div>
-                            <label class="text-xs text-gray-400">Berýän (TMT)</label>
-                            <input type="number" name="beryan" placeholder="Möçber" class="w-full bg-slate-700 text-white rounded-md px-3 py-2 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-accent">
-                        </div>
-                        <div>
-                            <label class="text-xs text-gray-400">Alýan (Balans)</label>
-                            <input type="number" name="alyan" placeholder="Möçber" class="w-full bg-slate-700 text-white rounded-md px-3 py-2 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-accent">
-                        </div>
-                    </div>
-                </div>
+
                 <div class="balance-calculator-row" data-rate="0.01">
                     <div class="flex justify-between items-center mb-2">
                         <span class="font-semibold text-lg">Bankomat (kartdan karta)</span>
@@ -126,6 +111,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="balance-calculator-row" data-rate="0.00">
                     <div class="flex justify-between items-center mb-2">
                         <span class="font-semibold text-lg">USDT</span>
@@ -142,6 +128,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="balance-calculator-row" data-rate="0.00">
                     <div class="flex justify-between items-center mb-2">
                         <span class="font-semibold text-lg">Nagt</span>
@@ -182,7 +169,7 @@
                 <span class="product-name ml-3 text-sm font-semibold">PUBG UC</span>
             </button>
             <button data-product="clash_royale" class="open-purchase-button w-full flex items-center text-gray-300 hover:text-accent p-2 rounded-full hover:bg-slate-700 transition-all duration-300">
-                <img src="https.www.yyldyz.store/_next/image?url=%2Fjtns%2Froyale-gem.png&w=1920&q=75" class="w-7 h-7 rounded-lg object-cover flex-shrink-0" alt="Clash Royale">
+                <img src="https://www.yyldyz.store/_next/image?url=%2Fjtns%2Froyale-gem.png&w=1920&q=75" class="w-7 h-7 rounded-lg object-cover flex-shrink-0" alt="Clash Royale">
                 <span class="product-name ml-3 text-sm font-semibold">Clash Royale</span>
             </button>
             <button data-product="clash_of_clans" class="open-purchase-button w-full flex items-center text-gray-300 hover:text-accent p-2 rounded-full hover:bg-slate-700 transition-all duration-300">
@@ -232,16 +219,68 @@
         </div>
 
         <header class="fixed top-4 left-0 right-0 z-30 px-4">
-            </header>
+            <nav class="relative w-full max-w-6xl mx-auto bg-[#1e1e2d]/70 backdrop-blur-lg border border-slate-700 shadow-lg rounded-full px-4 sm:px-6 py-2 flex items-center">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="flex-grow text-center">
+                    <span class="text-xl font-bold text-white">ORG<span class="text-accent">TM</span>SHOP</span>
+                </div>
+                <div class="flex-shrink-0">
+                    <a href="https://t.me/OrgTmShop" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </header>
         
         <main class="pt-24 sm:pt-28 pb-28 md:pb-10 min-h-screen flex flex-col items-center px-4">
             <div id="purchase-section" class="w-full max-w-lg">
+                <div class="bg-surface/80 backdrop-blur-sm rounded-3xl w-full flex flex-col border border-slate-700 shadow-2xl">
+                    <div class="p-4 bg-surface-darker/50 flex flex-col items-center justify-center rounded-t-3xl space-y-3">
+                        <div class="flex items-center gap-2">
+                            <h3 id="purchase-category-title" class="text-lg font-bold text-white"></h3>
+                            <button id="info-button" class="text-gray-400 hover:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                            </button>
+                        </div>
+                        <div class="bg-surface p-1 rounded-lg flex space-x-1">
+                            <button data-currency="TMT" class="tab active px-8 py-2 text-sm font-semibold rounded-md transition">TMT</button>
+                            <button data-currency="USDT" class="tab px-8 py-2 text-sm font-semibold rounded-md text-gray-400 transition hover:bg-slate-700">USDT</button>
+                        </div>
+                    </div>
+                    <div class="p-4 px-6 space-y-3">
+                        <div id="purchase-options-list" class="space-y-3"></div>
+                    </div>
+                    <div class="p-3 border-t border-slate-700 bg-surface-darker/50 rounded-b-3xl">
+                    </div>
                 </div>
+            </div>
         </main>
     </div>
 
     <div id="balance-display" class="fixed bottom-20 md:bottom-4 left-4 z-50">
+        <div class="flex items-center gap-2 bg-surface/80 backdrop-blur-md p-2 rounded-full border border-slate-700 shadow-lg">
+            <img src="https://placehold.co/40x40/7c3aed/ffffff?text=U" alt="Profil suraty" class="w-10 h-10 rounded-full border-2 border-accent">
+            <div class="pr-1">
+                <p class="font-bold text-white text-lg leading-tight">
+                    <span id="balance-value">0.00</span> 
+                    <span class="text-sm font-medium text-gray-400">TMT</span>
+                </p>
+            </div>
+            <button id="open-balance-modal" class="w-8 h-8 rounded-full bg-accent/20 text-accent hover:bg-accent hover:text-white flex items-center justify-center transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            </button>
         </div>
+    </div>
 
     <script type="module" src="script.js"></script>
 </body>
